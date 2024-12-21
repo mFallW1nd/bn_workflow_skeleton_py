@@ -4,12 +4,12 @@ import json
 
 class SkeletonActivity(Activity):
     configuration = {
-        "name": "analysis.plugins.activitySkeleton",
+        "name": "skeleton.function.activitySkeleton",
         "title": "Activity Skeleton for Python",
         "description": "A skeleton activity for python",
         "eligibility": {
             "auto": {
-                "default": True,
+                "default": False,
             },
         },
     }
@@ -27,3 +27,4 @@ class SkeletonActivity(Activity):
             f"Skeleton running for function: {hex(context.function.start)}"
             # Insert your logic here :P
         )
+        log_warn("Skeleton asdasd")

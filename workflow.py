@@ -10,8 +10,8 @@ configuration = {
 }
 
 
-def register():
-    workflow = Workflow().clone(name)
+def register_workflow():
+    workflow = Workflow("core.function.metaAnalysis").clone(name)
 
     # LLIL
     workflow.insert(

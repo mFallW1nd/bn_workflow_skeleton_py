@@ -1,5 +1,5 @@
 from binaryninja import *
-from .workflow import register
+from .workflow import register_workflow
 
 
 name = "plugin.function.skeletonWorkflow"
@@ -22,19 +22,15 @@ def plugin_command_action(view: BinaryView, func: Function):
     else:
         target_workflow = name
 
-    # 设置工作流
     settings.set_string("analysis.workflows.functionWorkflow", target_workflow, func)
     log_info(f"Set workflow <{target_workflow}> to function <{func.symbol.full_name}>")
 
-    # 重新分析函数
     func.reanalyze()
 
 
-register()
-
-# 注册插件命令
+register_workflow()
 PluginCommand.register_for_function(
-    "SkeletonWorkflow\\Toggle Workflow",
+    "SkeletonWorkflow\\Toggle Workflow for Current Function",
     "",
     plugin_command_action,
     check_workflow_valid,
