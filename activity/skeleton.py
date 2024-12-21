@@ -1,5 +1,5 @@
-from binaryninja import Workflow, Activity, AnalysisContext, log_warn
 import json
+from binaryninja import Workflow, Activity, AnalysisContext, log_info
 
 
 class SkeletonActivity(Activity):
@@ -23,7 +23,7 @@ class SkeletonActivity(Activity):
 
     @staticmethod
     def run(context: AnalysisContext):
-        log_warn(
+        log_info(
             f"Skeleton running for function: {hex(context.function.start)}"
             # Insert your logic here :P
         )

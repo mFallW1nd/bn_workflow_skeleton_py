@@ -1,6 +1,7 @@
-from .activity.skeleton import SkeletonActivity
-from binaryninja import BinaryView, Workflow, log_info
 import json
+from binaryninja import Workflow
+from .activity.skeleton import SkeletonActivity
+
 
 name = "skeleton.function.skeletonWorkflow"
 configuration = {
