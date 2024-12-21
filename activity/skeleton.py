@@ -27,4 +27,3 @@ class SkeletonActivity(Activity):
             f"Skeleton running for function: {hex(context.function.start)}"
             # Insert your logic here :P
         )
-        log_warn("Skeleton asdasd")

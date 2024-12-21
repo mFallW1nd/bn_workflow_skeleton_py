@@ -2,7 +2,7 @@ from .activity.skeleton import SkeletonActivity
 from binaryninja import BinaryView, Workflow, log_info
 import json
 
-name = "plugin.function.skeletonWorkflow"
+name = "skeleton.function.skeletonWorkflow"
 configuration = {
     "title": "SkeletonWorkflow",
     "description": "Skeleton Workflow for Python",
